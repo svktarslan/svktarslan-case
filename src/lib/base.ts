@@ -3,6 +3,7 @@ import axios, {
   AxiosResponse,
   InternalAxiosRequestConfig,
 } from "axios";
+
 const url = "https://newsapi.org/v2/";
 const instance = (): AxiosInstance => {
   const instance = axios.create({
@@ -19,7 +20,7 @@ const instance = (): AxiosInstance => {
 
       config.params = {
         ...config.params,
-        apiKey: "75b31769c3264793a85b4ec14aa27dba",
+        apiKey: import.meta.env.VITE_NEWS_API_KEY,
       };
       return config;
     },

@@ -1,0 +1,68 @@
+{
+  "root": true,
+  "env": { "browser": true, "es2020": true },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": [
+    "dist",
+    ".eslintrc.cjs",
+    "babel.config.js",
+    "__mocks__",
+    "app.mjs",
+    "custom.d.ts",
+    "webpack.*"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react-refresh"],
+  "rules": {
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "jsx-quotes": ["error", "prefer-double"],
+    "semi": ["error", "always"],
+    "max-len": [
+      "error",
+      {
+        "code": 140
+      }
+    ],
+    "linebreak-style": "off",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-alert": "error",
+    "no-var": "error",
+    "space-before-blocks": "error",
+    "arrow-spacing": "error",
+    "key-spacing": [
+      "error",
+      {
+        "beforeColon": false
+      }
+    ],
+    "newline-before-return": "error",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/no-unknown-property": "off",
+    "react/display-name": "off",
+    "react/no-children-prop": ["off", {
+      "allowFunctions": true
+    }]
+  }
+}
