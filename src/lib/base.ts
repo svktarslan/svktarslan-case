@@ -16,6 +16,9 @@ const instance = (): AxiosInstance => {
       config.headers = {
         Accept: "application/json",
         "content-type": "application/json",
+        origin: "http://localhost:3000",
+        Referer: "http://localhost:3000/",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
       } as never;
 
       config.params = {
