@@ -4,10 +4,9 @@ import axios, {
   InternalAxiosRequestConfig,
 } from "axios";
 
-const url = "https://newsapi.org/v2/";
 const instance = (): AxiosInstance => {
   const instance = axios.create({
-    baseURL: url,
+    baseURL: "/api",
     timeout: 60000,
   });
 
@@ -16,7 +15,6 @@ const instance = (): AxiosInstance => {
       config.headers = {
         Accept: "application/json",
         "Content-type": "application/json; charset=UTF-8",
-        "Referrer-Policy": "no-referrer-when-downgrade",
       } as never;
 
       config.params = {
