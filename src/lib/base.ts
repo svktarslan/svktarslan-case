@@ -15,10 +15,8 @@ const instance = (): AxiosInstance => {
     async function (config: InternalAxiosRequestConfig<unknown>) {
       config.headers = {
         Accept: "application/json",
-        "content-type": "application/json",
-        origin: "http://localhost:3000",
-        Referer: "http://localhost:3000/",
-        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-type": "application/json; charset=UTF-8",
+        "Referrer-Policy": "no-referrer-when-downgrade",
       } as never;
 
       config.params = {
