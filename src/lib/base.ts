@@ -15,6 +15,8 @@ const instance = (): AxiosInstance => {
       config.headers = {
         Accept: "application/json",
         "Content-type": "application/json; charset=UTF-8",
+        "Cache-Control": "no-cache",
+        Pragma: "no-cache",
       } as never;
 
       config.params = {
