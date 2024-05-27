@@ -17,7 +17,7 @@ const NewsSwiper = ({ data }: { data: Item[] }) => {
           dynamicBullets: true,
         }}
         autoplay={{
-          delay: 8000,
+          delay: 5000,
         }}
         modules={[Autoplay, Pagination]}
         style={{ width: "100%", height: "100%", paddingBottom: "30px" }}

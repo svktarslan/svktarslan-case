@@ -29,7 +29,7 @@ const News = () => {
   return (
     <div className="flex justify-center">
       <div className="max-w-6xl w-full px-5">
-        <NewsSwiper data={data} />
+        <NewsSwiper data={data?.slice(0, 3)} />
         <div className="w-full flex py-5 justify-between items-center">
           <h1 className="text-2xl font-semibold">{category.toUpperCase()}</h1>
           <button
@@ -41,7 +41,7 @@ const News = () => {
           </button>
         </div>
         <div className="py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
-          {data?.map((item: Item) => (
+          {data?.slice(3).map((item: Item) => (
             <Card
               key={item.title}
               type="small"
